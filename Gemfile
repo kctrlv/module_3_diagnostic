@@ -15,6 +15,9 @@ gem 'figaro'
 group :development, :test do
   gem 'byebug'
   gem 'rspec-rails', '~> 3.5'
+  gem 'awesome_print'
+  gem 'capybara'
+  gem 'launchy'
 end
 
 group :development do
