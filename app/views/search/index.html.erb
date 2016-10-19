@@ -1,0 +1,14 @@
+<h1>Closest Stations: </h1>
+<div class="stations">
+  <ol>
+  <%= @stations.each do |station| %>
+    <h4>station.name</h4>
+    <ul>
+      <%= station.address %>
+      <%= station.type %>
+      <%= station.distance %>
+      <%= station.access_time %>
+    </ul>
+  <% end %>
+</ol>
+</div>

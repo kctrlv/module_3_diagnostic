@@ -10,7 +10,8 @@ RSpec.feature "Fuel Stations Search by Zip Code", :type => :feature do
     # And I click "Locate"
     click_on "Locate"
     # Then I should be on page "/search" with parameters visible in the url
-    expect(page).to have_current_path(search_path(commit: "Locate", q: "80203", utf8: "%E2%9C%93")
+    # expect(page).to have_current_path(search_path(utf8: "%E2%9C%93",  q: "80203", commit: "Locate"))
+    expect(page).to have_current_path('/search?utf8=%E2%9C%93&q=80203&commit=Locate')
     # Then I should see a list of the 10 closest stations within 6 miles sorted by distance
     expect(page).to have_content("Closest Stations: ")
     # And the stations should be limited to Electric and Propane
