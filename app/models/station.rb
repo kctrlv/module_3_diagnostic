@@ -1,6 +1,10 @@
 class Station
   attr_reader :type, :name, :distance, :access_time
 
+  def self.nearest_stations(num:, location:)
+    byebug
+  end
+
   def initialize(params)
     @access_time = params[:access_days_time]
     @type        = params[:fuel_type_code]
