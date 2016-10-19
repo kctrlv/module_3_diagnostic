@@ -7,10 +7,10 @@ class SearchController < ApplicationController
 
 
     res = conn.get('/api/alt-fuel-stations/v1/nearest.json', get_params )
-    byebug
 
-
+    raw_stations = JSON.parse(res.body, symbolize_names: true)[:fuel_stations]
     ### OBJECT
+    @stations = raw_stations.map { |station| Station.new(station) }
 
 
 
