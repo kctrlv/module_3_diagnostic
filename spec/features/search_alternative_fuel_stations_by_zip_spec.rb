@@ -21,7 +21,7 @@ RSpec.feature "Fuel Stations Search by Zip Code", :type => :feature do
       expect(page).to have_content("800 Acoma St")
       expect(page).to have_content("Denver, CO 80204")
       expect(page).to have_content("ELEC")
-      expect(page).to have_content("0.31 miles")
+      expect(page).to have_content("0.31 miles away")
       expect(page).to have_content("24 hours daily")
     end
   end

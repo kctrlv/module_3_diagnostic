@@ -1,6 +1,6 @@
 class Station
-  attr_reader :type, :name, :distance
-  
+  attr_reader :type, :name, :distance, :access_time
+
   def initialize(params)
     @access_time = params[:access_days_time]
     @type        = params[:fuel_type_code]
